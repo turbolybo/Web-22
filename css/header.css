@@ -20,6 +20,10 @@ li {
    padding: 0px 30px 0px 30px;
    line-height: 100px;
 }
+li:hover {
+   background: #3d3d3d;
+   color: #FFF;
+}
 #mobile-menu {
    width: 80px;
    max-height: 80px;
