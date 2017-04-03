@@ -5,7 +5,7 @@
    use Carbon\Carbon;
    Carbon::setLocale('no');
 
-   $port = 8666;
+   $port = 8889;
    $username = 'root';
    $password = 'root';
    $name = 'eksamen';
