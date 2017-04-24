@@ -5,13 +5,6 @@
    use Carbon\Carbon;
    Carbon::setLocale('no');
 
-   /* Lokal
-   $port = 8889;
-   $username = 'root';
-   $password = 'root';
-   $name = 'eksamen';
-   */
-
    // - Global -
    $port = 3306;
    $username = 'lybotech_com';
@@ -29,13 +22,6 @@
    }
 
 ?>
-<head>
-   <meta name="viewport" content="initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="css/body.css">
-   <link rel="stylesheet" type="text/css" href="css/header.css">
-   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-</head>
-
 <body ontouchstart>
    <?php include_once 'header.php'; ?>
    <div id="event-container">
