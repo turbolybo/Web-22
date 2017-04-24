@@ -82,3 +82,14 @@ body, html {
    font-size: .8em;
    display: block;
 }
+@media only screen and (max-device-width: 1200px), screen and (max-width: 1200px)  {
+   #event-container {
+      height: 1200px;
+   }
+   #event-left {
+      width: 100%;
+   }
+   #event-right {
+      width: 100%;
+   }
+}
