@@ -4,9 +4,9 @@
    <div id="mobile-menu">≡</div>
    <ul class="menu">
       <a href="index.php"><li>HJEM</li></a>
-      <a href="index.php"><li>FJERDINGEN</li></a>
-      <a href="index.php"><li>VULKAN</li></a>
-      <a href="index.php"><li>BRENNERIVEIEN</li></a>
+      <a href="fjerdingen.php"><li>FJERDINGEN</li></a>
+      <a href="vulkan.php"><li>VULKAN</li></a>
+       <a href="brenneriveien.php"><li>BRENNERIVEIEN</li></a>
    </ul>
 </nav>
 </header>

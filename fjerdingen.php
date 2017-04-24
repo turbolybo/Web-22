@@ -30,7 +30,7 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 </head>
 <body ontouchstart>
 
-<h1>Hei</h1>
+<h1>Hei Andreas, hvordan går det?</h1>
 
 </body>
 </html>
