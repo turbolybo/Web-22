@@ -92,4 +92,7 @@ body, html {
    #event-right {
       width: 100%;
    }
+   .event-title {
+      font-size: 3em;
+   }
 }
