@@ -5,10 +5,10 @@
 
    $port = 8666;
    $username = 'root';
-   $password = 'root';
+   $password = '';
    $name = 'eksamen';
 
-   $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
+   $connection = new PDO('mysql:host=localhost;dbname=lyband16_eksamen', $username, $password);
    $statement = $connection->prepare('SELECT * FROM events ORDER BY date ASC');
    $statement->execute();
    $events = [];

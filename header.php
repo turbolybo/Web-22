@@ -1,10 +1,12 @@
-<header>
-   <a href=""><div class="logo"></div></a>
+<head>
    <link rel="stylesheet" type="text/css" href="css/header.css">
    <meta name="viewport" content="initial-scale=1.0">
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="css/body.css">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<header>
+   <a href=""><div class="logo"></div></a>
 <nav id="nav">
    <div id="mobile-menu">≡</div>
    <ul class="menu">
