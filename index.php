@@ -1,19 +1,15 @@
 <!doctype HTML>
 <?php
 
-   require 'vendor/autoload.php';
-   use Carbon\Carbon;
-   Carbon::setLocale('no');
-
    // LOKAL VERSJON
    /*
-   include_once 'php/local-query.php';
+   include 'php/local-query.php';
    */
 
    // LIVE VERSJON
 
-   include_once 'php/live-query.php';
-
+   include 'php/live-query.php';
+   
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>

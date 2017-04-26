@@ -1,4 +1,8 @@
 <?php
+require './vendor/autoload.php';
+use Carbon\Carbon;
+Carbon::setLocale('no');
+
 $port = 3306;
 $username = 'root';
 $password = 'root';
