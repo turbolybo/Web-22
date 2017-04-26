@@ -22,6 +22,7 @@ body, html {
    width: 50%;
    height: 300px;
    float: left;
+   background-size: cover;
 }
 .event-title-small {
    font-size: 2em !important;
@@ -39,6 +40,7 @@ body, html {
    width: 100%;
    height: 600px;
    background-size: cover;
+   background-repeat: no-repeat;
    flex-direction: column;
    -moz-box-shadow: inset 0 -150px 200px -150px #000;
    -webkit-box-shadow: inset 0 -150px 200px -150px #000;
@@ -81,6 +83,61 @@ body, html {
 .event-description {
    font-size: .8em;
    display: block;
+}
+.footer-container {
+   width: 100%;
+   height: 400px;
+   background: #f2f2f2;
+}
+#footer-inner {
+   width: 750px;
+   height: 300px;
+   padding-top: 50px;
+   margin: auto;
+   border-bottom: 1px solid #d9d9d9;
+}
+.sitemap {
+   margin-right: 25px;
+   float: left;
+}
+.sitemap a {
+   text-decoration: none;
+   color: #3E6883;
+}
+#footer-inner li {
+   list-style: none;
+   margin-top: 5px;
+}
+#footer-bottom {
+   width: 750px;
+   height: 50px;
+   line-height: 55px;
+   font-size: .8em;
+   text-align: center;
+   margin: auto;
+}
+@media only screen and (max-device-width: 750px), screen and (max-width: 750px) {
+   .footer-container {
+      height: 900px;
+      width: 100%;
+      overflow: hidden;
+   }
+   #footer-inner {
+      height: 800px;
+      width: 100%;
+   }
+   .sitemap {
+      width: 100%;
+   }
+   .sitemap li {
+      border-bottom: 1px solid #d9d9d9;
+      padding: 7px 0px 7px 0px;
+   }
+   #footer-bottom {
+      width: 100%;
+      text-align: left;
+      margin-left: 40px;
+   }
 }
 @media only screen and (max-device-width: 1200px), screen and (max-width: 1200px)  {
    #event-container {

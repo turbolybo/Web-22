@@ -17,6 +17,7 @@
    $statement->execute();
    $events = [];
    */
+
    // - Local -
    $port = 3306;
    $username = 'root';
@@ -36,15 +37,17 @@
 
 ?>
 <body ontouchstart>
-   <?php include_once 'header.php'; ?>
+   <?php include_once 'php/header.php'; ?>
    <div id="event-container">
       <!-- VENSTRE - NYESTE EVENT -->
       <div id="event-left">
-         <?php require 'event-left.php'; ?>
+         <?php require 'php/event-left.php'; ?>
       </div>
 
       <!-- HØYRE - 4 SMÅ EVENTS -->
       <div id="event-right">
-         <?php require 'event-right.php'; ?>
+         <?php require 'php/event-right.php'; ?>
+      </div>
    </div>
+   <?php include_once 'php/footer.php';?>
 </body>
