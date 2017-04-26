@@ -2,28 +2,28 @@
    <div id="footer-inner">
         <ul class="sitemap">
            <li><b>Oversikt:</b></li>
-           <li><a href="./index.php">Hjem</a></li>
-           <li><a href="./index.php">Arrangementer</a></li>
-           <li><a href="./index.php">Aktiviteter</a></li>
-           <li><a href="./index.php">Campus</a></li>
+           <a href="./index.php"><li>Hjem</li></a>
+           <a href="./index.php"><li>Arrangementer</li></a>
+           <a href="./index.php"><li>Aktiviteter</li></a>
+           <a href="./index.php"><li>Campus</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Arrangementer:</b></li>
-           <li><a href="./index.php">Nær Fjerdingen</a></li>
-           <li><a href="./index.php">Nær Vulkan</a></li>
-           <li><a href="./index.php">Nær Brenneriveien</a></li>
+           <a href="./index.php"><li>Nær Fjerdingen</li></a>
+           <a href="./index.php"><li>Nær Vulkan</li></a>
+           <a href="./index.php"><li>Nær Brenneriveien</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Aktiviteter:</b></li>
-           <li><a href="./index.php">Nær Fjerdingen</a></li>
-           <li><a href="./index.php">Nær Vulkan</a></li>
-           <li><a href="./index.php">Nær Brenneriveien</a></li>
+           <a href="./index.php"><li>Nær Fjerdingen</li></a>
+           <a href="./index.php"><li>Nær Vulkan</li></a>
+           <a href="./index.php"><li>Nær Brenneriveien</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Campus:</b></li>
-           <li><a href="./index.php">Fjerdingen</a></li>
-           <li><a href="./index.php">Vulkan</a></li>
-           <li><a href="./index.php">Brenneriveien</a></li>
+           <li><a href="./index.php">Fjerdingen</li></a>
+           <li><a href="./index.php">Vulkan</li></a>
+           <li><a href="./index.php">Brenneriveien</li></a>
         </ul>
    </div>
    <div id="footer-bottom">Copyright © 2017 - Eksamensgruppe 22. Alle rettigheter forbeholdes.</div>

@@ -5,35 +5,14 @@
    use Carbon\Carbon;
    Carbon::setLocale('no');
 
-   // - Global -
+   // LOKAL VERSJON
    /*
-   $port = 3306;
-   $username = 'lybotech_com';
-   $password = 'Te6kxjvvbx';
-   $name = 'events';
-
-   $connection = new PDO('mysql:host=lybotech.com.mysql;dbname=lybotech_com', $username, $password);
-   $statement = $connection->prepare('SELECT * FROM events ORDER BY date ASC');
-   $statement->execute();
-   $events = [];
+   include_once 'php/local-query.php';
    */
 
-   // - Local -
-   $port = 3306;
-   $username = 'root';
-   $password = 'root';
-   $name = 'events';
+   // LIVE VERSJON
 
-   // Local
-   $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
-   $statement = $connection->prepare('SELECT * FROM events ORDER BY date ASC');
-   $statement->execute();
-   $events = [];
-
-   while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      $row['date'] = new Carbon($row['date']);
-      $events[] = $row;
-   }
+   include_once 'php/live-query.php';
 
 ?>
 <body ontouchstart>
