@@ -76,6 +76,9 @@ body, html {
    transition: all ease-in-out .2s;
    font-weight: bold;
 }
+.event-small a, .event-left a {
+   text-decoration: none !important;
+}
 .event-read:hover {
    background: #FFF;
    color: #000;

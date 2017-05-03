@@ -2,14 +2,14 @@
 <?php
 
    // LOKAL VERSJON
-   /*
+
    include 'php/local-query.php';
-   */
+   $events = Event::all();
 
    // LIVE VERSJON
-
+   /*
    include 'php/live-query.php';
-   
+   */
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>

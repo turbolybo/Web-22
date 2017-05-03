@@ -1,14 +1,25 @@
 body {
-   background: #61afca;
+   background: linear-gradient(#121212, #222222);
    font-family: 'Lato', sans-serif;
 }
 #admin-container {
    width: 450px;
-   height: 700px;
+   height: 650px;
    margin: auto;
+   margin-bottom: 50px;
    background: #FFF;
    padding: 10px 30px;
-   margin-top: 20px;
+   margin-top: 50px;
+}
+#admin-check {
+   width: 450px;
+   height: 200px;
+   margin: auto;
+   margin-bottom: 50px;
+   background: #FFF;
+   padding: 20px 20px;
+   margin-top: 50px;
+   text-align: center;
 }
 input {
    width: 400px;
@@ -19,17 +30,83 @@ input {
    border-bottom: 1px solid #d9d9d9;
    font-size: 1.2em;
 }
+.submit-first {
+   background: #7ec59d;
+   height: 60px;
+   color: #FFF;
+   margin-top: 15px;
+}
+.submit-first:hover {
+   background: #589974;
+}
 input[type=submit] {
    background: #ff7061;
    color: #FFF;
    border: none;
    height: 60px;
 }
+input[type=submit]:hover {
+   background: #c34d41;
+}
 input[type=date] {
    color: #757575;
    font-family: 'Lato', sans-serif;
 }
+input[type=radio] {
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   float: left;
+}
 h3 {
    text-align: center;
    color: #757575;
+}
+#display-rows {
+   width: 100%;
+   min-height: 50px;
+   margin: auto;
+   background: #333333;
+   color: #FFF;
+}
+.admin-row {
+   width: 500px;
+   height: 40px;
+   margin: auto;
+   border-bottom: 1px solid #AAAAAA;
+   line-height: 40px;
+}
+.admin-row:hover {
+   color: #1db954;
+}
+#admin-edit {
+   text-align: right !important;
+   background: url(http://megaicons.net/static/img/icons_sizes/8/178/512/editing-edit-icon.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 20px;
+   width: 20px;
+   margin-top: 8px;
+   float: right;
+}
+#admin-date {
+   min-width: 150px;
+   height: 40px;
+   float: left;
+}
+#admin-title {
+   width: 300px;
+   height: 40px;
+   float: left;
+}
+#admin-delete {
+   text-align: right !important;
+   background: url(http://iconshow.me/media/images/Application/Modern-Flat-style-Icons/png/512/Delete.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 20px;
+   width: 20px;
+   margin-top: 8px;
+   margin-right: 10px;
+   float: right;
 }

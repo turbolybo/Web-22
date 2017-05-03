@@ -26,5 +26,5 @@
            <li><a href="./index.php">Brenneriveien</li></a>
         </ul>
    </div>
-   <div id="footer-bottom">Copyright © 2017 - Eksamensgruppe 22. Alle rettigheter forbeholdes.</div>
+   <div id="footer-bottom">Copyright © 2017 - Eksamensgruppe 22. Alle rettigheter forbeholdes. <a href="admin.php">Admin</a></div>
 </footer>

@@ -1,5 +1,12 @@
 {
     "require": {
-      "nesbot/carbon": "^1.22"
-   }
+        "nesbot/carbon": "1.22",
+        "illuminate/database": "^5.4"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "": "php/"
+        }
+    }
 }
