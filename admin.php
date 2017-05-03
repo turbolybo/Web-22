@@ -9,6 +9,7 @@
 <body ontouchstart>
 
    <?php
+    include 'php/local-query.php';
       include_once 'header.php';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
    ?>
@@ -65,17 +66,10 @@
       $username = 'root';
       $password = '';
       $name = 'events';
+      
+     
+      $events = Event::all();
 
-      // Local
-      $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
-      $statement = $connection->prepare('SELECT * FROM events ORDER BY date DESC');
-      $statement->execute();
-      $events = [];
-
-      while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-         $row['date'] = new Carbon($row['date']);
-         $events[] = $row;
-      }
       foreach ($events as $event) {?>
          <div class="admin-row">
             <div id="admin-date"><?= $event['date']->diffForHumans() ?></div>
