@@ -1,10 +1,10 @@
 body {
-   background: linear-gradient(#121212, #222222);
+   background: linear-gradient(#323232, #676767);
    font-family: 'Lato', sans-serif;
 }
 #admin-container {
    width: 450px;
-   height: 650px;
+   height: 810px;
    margin: auto;
    margin-bottom: 50px;
    background: #FFF;
@@ -68,6 +68,9 @@ h3 {
    margin: auto;
    background: #333333;
    color: #FFF;
+}
+.admin-description {
+   height: 200px !important;
 }
 .admin-row {
    width: 500px;

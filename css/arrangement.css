@@ -12,8 +12,7 @@
 }
 section {
    max-width: 1024px;
-   min-width: 480px;
-   min-height: 600px;
+   min-height: 400px;
    margin: auto;
    padding: 20px
 }
