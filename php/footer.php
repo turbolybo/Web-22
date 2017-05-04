@@ -3,7 +3,7 @@
         <ul class="sitemap">
            <li><b>Oversikt:</b></li>
            <a href="./index.php"><li>Hjem</li></a>
-           <a href="./index.php"><li>Arrangementer</li></a>
+           <a href="./arrangement.php"><li>Arrangementer</li></a>
            <a href="./index.php"><li>Aktiviteter</li></a>
            <a href="./index.php"><li>Campus</li></a>
         </ul>
