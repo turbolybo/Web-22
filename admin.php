@@ -10,7 +10,7 @@
 
    <?php
     include 'php/local-query.php';
-      include_once 'header.php';
+      include_once 'php/header.php';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
    ?>
    <?php
