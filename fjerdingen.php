@@ -31,5 +31,6 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 <?php include_once 'php/header.php'; ?>
 <h1>FJERDINGEN</h1>
 
+<?php include_once 'php/footer.php';?>
 </body>
 </html>
