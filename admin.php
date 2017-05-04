@@ -62,9 +62,9 @@
       use Carbon\Carbon;
       Carbon::setLocale('no');
 
-      $port = 3306;
+      $port = 8889;
       $username = 'root';
-      $password = '';
+      $password = 'root';
       $name = 'events';
 
 

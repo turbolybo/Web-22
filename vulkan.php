@@ -29,8 +29,8 @@ while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
     <title>Web-22</title>
 </head>
 <body ontouchstart>
-
-<h1>Hei</h1>
+<?php include_once 'php/header.php'; ?>
+<h1>VULKAN</h1>
 
 </body>
 </html>

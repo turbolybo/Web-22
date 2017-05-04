@@ -7,7 +7,7 @@
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <header>
-   <a href=""><div class="logo"></div></a>
+   <a href="index.php"><div class="logo"></div></a>
 <nav id="nav">
    <div id="mobile-menu">≡</div>
    <ul class="menu">
