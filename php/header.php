@@ -11,9 +11,9 @@
 <nav id="nav">
    <div id="mobile-menu">≡</div>
    <ul class="menu">
-       <li><a href="index.php">HJEM</a></li>
-       <li><a href="index.php">ARRANGEMENTER</a></li>
-       <li><a href="index.php">AKTIVITETER</a></li>
+       <a href="index.php"><li>HJEM</li></a>
+       <a href="index.php"><li>ARRANGEMENTER</li></a>
+       <a href="index.php"><li>AKTIVITETER</li></a>
        <li class="dropdown">
         <a class="dropbtn" href="index.php">CAMPUS</a>
             <div class="dropdown-content">
