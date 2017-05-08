@@ -15,7 +15,7 @@
        <a href="index.php"><li>ARRANGEMENTER</li></a>
        <a href="index.php"><li>AKTIVITETER</li></a>
        <li class="dropdown">
-        <a class="dropbtn" href="index.php">CAMPUS</a>
+        <a class="dropbtn">CAMPUS</a>
             <div class="dropdown-content">
                     <a href="fjerdingen.php">Fjerdingen</a>
                     <a href="brenneriveien.php">Brenneriveien</a>
