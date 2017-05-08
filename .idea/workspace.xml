@@ -4,7 +4,6 @@
     <list default="true" id="2ab8f353-b3d0-4549-898c-d24c2dee8c12" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/header.php" afterPath="$PROJECT_DIR$/php/header.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -49,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/header.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            <state relative-caret-position="-1079">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -90,8 +89,8 @@
         <option value="$PROJECT_DIR$/vulkan.php" />
         <option value="$PROJECT_DIR$/brenneriveien.php" />
         <option value="$PROJECT_DIR$/fjerdingen.php" />
-        <option value="$PROJECT_DIR$/css/header.css" />
         <option value="$PROJECT_DIR$/php/header.php" />
+        <option value="$PROJECT_DIR$/css/header.css" />
       </list>
     </option>
   </component>
@@ -116,8 +115,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="202" />
-    <option name="y" value="81" />
+    <option name="x" value="374" />
+    <option name="y" value="250" />
     <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
@@ -305,10 +304,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30333000" />
+    <option name="totallyTimeSpent" value="31060000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="202" y="81" width="1370" height="744" extended-state="0" />
+    <frame x="374" y="250" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489051" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -567,18 +566,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1079">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
