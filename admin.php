@@ -16,6 +16,7 @@
       use Carbon\Carbon;
       Carbon::setLocale('no');
 
+      $events = Event::all();
       $port = 3306;
       $username = 'root';
       $password = '';
@@ -78,26 +79,13 @@
       </div>';
    }
    ?>
-<<<<<<< HEAD
+
    <div id="row-parent">
       <div id="arrangement-parent">
       <div id="top-row">Arrangementer</div>
       <div id="display-rows">
-         <?php
-         $events = Event::all();
-=======
    <div id="display-rows">
       <?php
-      require './vendor/autoload.php';
-      use Carbon\Carbon;
-      Carbon::setLocale('no');
-
-      $port = 8889;
-      $username = 'root';
-      $password = 'root';
-      $name = 'events';
->>>>>>> 7167929f80f7c6950b298940da1db14ac6698d77
-
          foreach ($events as $event) {?>
             <div class="admin-row">
                <div id="admin-id"><?= $event['id'] ?></div>
@@ -109,6 +97,7 @@
          <?php }?>
       </div>
    </div>
+</div>
 
    <div id="aktiviteter-parent">
       <div id="top-row">Aktiviteter</div>

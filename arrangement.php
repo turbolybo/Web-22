@@ -8,9 +8,9 @@
    Carbon::setLocale('no');
    // Local
 
-   $port = 8889;
+   $port = 3306;
    $username = 'root';
-   $password = 'root';
+   $password = '';
    $name = 'events';
    $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
 
