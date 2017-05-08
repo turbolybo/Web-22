@@ -21,9 +21,9 @@
         </ul>
         <ul class="sitemap">
            <li><b>Campus:</b></li>
-           <li><a href="./index.php">Fjerdingen</li></a>
-           <li><a href="./index.php">Vulkan</li></a>
-           <li><a href="./index.php">Brenneriveien</li></a>
+           <li><a href="./fjerdingen.php">Fjerdingen</li></a>
+           <li><a href="./vulkan.php">Vulkan</li></a>
+           <li><a href="./brenneriveien.php">Brenneriveien</li></a>
         </ul>
    </div>
    <div id="footer-bottom">Copyright © 2017 - Eksamensgruppe 22. Alle rettigheter forbeholdes. <a href="admin.php">Admin</a></div>
