@@ -20,9 +20,15 @@ nav li {
    padding: 0px 30px 0px 30px;
    line-height: 100px;
 }
+
+nav li a{
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
 nav li:hover {
    background: #3d3d3d;
-   color: #FFF;
+   color: #FFFFFF;
 }
 
 #mobile-menu {
@@ -43,17 +49,23 @@ nav li:hover {
    margin: 10px 0px 0px 10px;
 }
 
+
 .dropdown {
     float: left;
     position: relative;
 }
 
-.dropdown .dropdownCampus {
+.dropdown {
     font-size: 16px;
     border: none;
     outline: none;
     color: white;
     background-color: inherit;
+}
+
+li a:hover, .dropdown:hover .dropbtn{
+    background-color: #3d3d3d;
+    color: #FFFFFF;
 }
 
 .dropdown-content {
@@ -64,6 +76,7 @@ nav li:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
     z-index: 1;
     width: inherit;
+    left: 0px;
 }
 
 .dropdown-content a {
@@ -77,6 +90,11 @@ nav li:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #FFFFFF;
+    color: #3d3d3d;
 }
 
 
