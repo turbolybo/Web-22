@@ -48,7 +48,7 @@ body, html {
 }
 .event-title {
    text-align: center;
-   font-size: 6em;
+   font-size: 5vw;
    font-weight: bold;
    padding-top: 200px;
    -moz-text-shadow: 0px 0px 6px #7E7E7E;

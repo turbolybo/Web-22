@@ -12,8 +12,30 @@
    <?php
     include 'php/local-query.php';
       include_once 'php/header.php';
+      require './vendor/autoload.php';
+      use Carbon\Carbon;
+      Carbon::setLocale('no');
+
+      $port = 3306;
+      $username = 'root';
+      $password = '';
+      $name = 'events';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
    ?>
+   <div id="admin-top-info">
+      <div class="admin-top-box">
+         <h4>Antall arrengementer:</h4>
+         <p class="blue">10</p>
+      </div>
+      <div class="admin-top-box offset">
+         <h4>Antall aktiviteter:</h4>
+         <p class="red">13</p>
+      </div>
+      <div class="admin-top-box offset">
+         <h4>Antall linjer kode:</h4>
+         <p class="orange">1000+</p>
+      </div>
+   </div>
    <?php
    if ($add_value == 0) {
       echo
@@ -56,28 +78,45 @@
       </div>';
    }
    ?>
-   <div id="display-rows">
+   <div id="row-parent">
+      <div id="arrangement-parent">
+      <div id="top-row">Arrangementer</div>
+      <div id="display-rows">
+         <?php
+         $events = Event::all();
+
+         foreach ($events as $event) {?>
+            <div class="admin-row">
+               <div id="admin-id"><?= $event['id'] ?></div>
+               <div id="admin-date"><?= $event['date']->diffForHumans() ?></div>
+               <div id="admin-title"><?= $event['title'] ?></div>
+               <a id="admin-edit" href="php/edit.php?id=<?= $event['id']?>"></a>
+               <a id="admin-delete" href="php/delete.php?id=<?= $event['id']?>"></a>
+            </div>
+         <?php }?>
+      </div>
+   </div>
+
+   <div id="aktiviteter-parent">
+      <div id="top-row">Aktiviteter</div>
+      <div id="display-rows">
       <?php
-      require './vendor/autoload.php';
-      use Carbon\Carbon;
-      Carbon::setLocale('no');
+/*      $activity = Activity::all();
 
-      $port = 3306;
-      $username = 'root';
-      $password = '';
-      $name = 'events';
-
-
-      $events = Event::all();
-
-      foreach ($events as $event) {?>
+      foreach ($activity as $a) {?>
          <div class="admin-row">
-            <div id="admin-date"><?= $event['date']->diffForHumans() ?></div>
-            <div id="admin-title"><?= $event['title'] ?></div>
-            <a id="admin-edit" href="php/edit.php?id=<?= $event['id']?>"></a>
-            <a id="admin-delete" href="php/delete.php?id=<?= $event['id']?>"></a>
+            <div id="admin-id"></div>
+            <div id="admin-date"></div>
+            <div id="admin-title"></div>
+            <a id="admin-edit" href="php/edit.php?id="></a>
+            <a id="admin-delete" href="php/delete.php?id=""></a>
          </div>
-      <?php }?>
+      <?php }
+*/
+      ?>
+   </div>
+   </div>
+   </div>
    </div>
    <?php include_once 'php/footer.php';?>
 </body>
