@@ -17,9 +17,9 @@
        <li class="dropdown">
         <a class="dropbtn">CAMPUS</a>
             <div class="dropdown-content">
-                    <a href="fjerdingen.php">Fjerdingen</a>
-                    <a href="brenneriveien.php">Brenneriveien</a>
-                    <a href="vulkan.php">Vulkan</a>
+                <a href="./skole.php?skoleId=3">Fjerdingen</a>
+                <a href="./skole.php?skoleId=2">Brenneriveien</a>
+                <a href="./skole.php?skoleId=1">Vulkan</a>
             </div>
        </li>
    </ul>
