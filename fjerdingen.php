@@ -5,9 +5,9 @@ require 'vendor/autoload.php';
 use Carbon\Carbon;
 Carbon::setLocale('no');
 
-$port = 8889;
+$port = 3306;
 $username = 'root';
-$password = 'root';
+$password = '';
 $name = 'eksamen';
 
 $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);

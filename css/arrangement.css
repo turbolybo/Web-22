@@ -42,3 +42,7 @@ h1 {
    line-height: 75px;
    color: #FFF;
 }
+#map {
+   height: 450px;
+   width: 100%;
+}
