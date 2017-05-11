@@ -79,7 +79,8 @@ nav li:hover {
     color: white;
     padding: 13.4px;
     display: block;
-    text-align: left;
+    text-align: center;
+    line-height: 30px;
 }
 
 .dropdown:hover .dropdown-content {
