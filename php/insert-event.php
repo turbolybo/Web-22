@@ -6,12 +6,12 @@
    $description = $_POST['description'];
 
    // Connect and select DB
-   $connect =  mysqli_connect('localhost', 'root', '');
+   $connect =  mysqli_connect('localhost', 'root', 'root');
    if (!$connect) {
       echo 'Not connected';
    }
 
-   if (!mysqli_select_db($connect, 'lyband16_eksamen')) {
+   if (!mysqli_select_db($connect, 'eksamen')) {
       echo 'Database not selected';
    }
 
