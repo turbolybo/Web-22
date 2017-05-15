@@ -28,5 +28,6 @@
    <div id="activity-container">
       <?php require 'php/activity-container.php'; ?>
    </div>
+   <div id="activity-seeall">SE ALLE TILBUD</div>
    <?php include_once 'php/footer.php';?>
 </body>
