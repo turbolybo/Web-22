@@ -16,10 +16,12 @@
       use Carbon\Carbon;
       Carbon::setLocale('no');
 
+
+
       $events = Event::all();
-      $port = 3306;
+      $port = 8889;
       $username = 'root';
-      $password = '';
+      $password = 'root';
       $name = 'events';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
    ?>
@@ -61,6 +63,8 @@
             <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
             <input type="date" name="date" class="ico-title" required></input>
             <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
+            <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
+            <input type="text" name="skole_id" placeholder="Hvilken skole" class="ico-title" required></input>
             <input type="text" name="description" class="admin-description" placeholder="Tekst" class="ico-title" required></input>
             <input type="submit" name="submit" value="LEGG TIL"></input>
          </form>

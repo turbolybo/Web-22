@@ -15,33 +15,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP" type="php">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/container" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/database" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/support" />
-          <root url="file://$MODULE_DIR$/vendor/nesbot/carbon" />
-          <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/composer" />
-          <root url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/container" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/database" />
-          <root url="file://$MODULE_DIR$/vendor/illuminate/support" />
-          <root url="file://$MODULE_DIR$/vendor/nesbot/carbon" />
-          <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
-          <root url="file://$MODULE_DIR$/vendor/symfony/translation" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
