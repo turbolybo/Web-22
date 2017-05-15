@@ -24,5 +24,9 @@
          <?php require 'php/event-right.php'; ?>
       </div>
    </div>
+   <h2 class="main-title">Aktiviteter / Lokale tilbud</h2>
+   <div id="activity-container">
+      <?php require 'php/activity-container.php'; ?>
+   </div>
    <?php include_once 'php/footer.php';?>
 </body>

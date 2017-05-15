@@ -41,14 +41,18 @@ body, html {
    height: 600px;
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
    flex-direction: column;
    -moz-box-shadow: inset 0 -150px 200px -150px #000;
    -webkit-box-shadow: inset 0 -150px 200px -150px #000;
    box-shadow: inset 0 -150px 200px -150px #000;
 }
+.main-title {
+   text-align: center;
+}
 .event-title {
    text-align: center;
-   font-size: 5vw;
+   font-size: 3vw;
    font-weight: bold;
    padding-top: 200px;
    -moz-text-shadow: 0px 0px 6px #7E7E7E;
@@ -86,6 +90,64 @@ body, html {
 .event-description {
    font-size: .8em;
    display: block;
+}
+#activity-container {
+   max-width: 1200px;
+   min-height: 450px;
+   margin: auto;
+}
+.activity-box {
+   width: 300px;
+   height: 400px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   border-radius: 3px;
+   box-shadow: 0px 5px 12px #CCC;
+   float: left;
+}
+.activity-box:not(:first-of-type) {
+   margin-left: 25px;
+}
+.activity-upper {
+   width: 300px;
+   height: 250px;
+   display: inline-block;
+}
+.visit {
+   width: 200px;
+   height: 50px;
+   text-align: center;
+   line-height: 50px;
+   margin: auto;
+   color: #000;
+   border: 3px solid #000;
+   font-weight: bold;
+}
+.visit:hover {
+   background: #000;
+   color: #FFF
+}
+.star {
+   width: 24px;
+   height: 24px;
+   position: relative;
+   top: 200px;
+   left: 70px;
+}
+.activity-lower {
+   width: 300px;
+   height: 150px;
+   display: inline-block;
+   background: #FFF;
+   text-align: center;
+   color: #4E4E59;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+}
+.activity-lower h3 {
+   margin: 0;
+   margin-top: 10px;
 }
 .footer-container {
    width: 100%;
