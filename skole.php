@@ -22,12 +22,15 @@
         }
 
         #infotext1 {
-            position: relative; bottom: 400px; left: 700px;
+            position: relative;
+            left: 37%;
         }
 
 
         #infotext2 {
-            position: relative; left: 735px; top: -55px;
+            position: relative;
+            left: 38%;
+            top: -55px;
 
         }
 
@@ -46,7 +49,9 @@
 
 
         #dropdown {
-            position: absolute; left: 850px; top: 200px;
+            position: absolute;
+            left: 45%;
+            top: 200px;
         }
 
         body::-webkit-scrollbar {
@@ -87,9 +92,7 @@
     */
     ?>
 <body ontouchstart>
-<?php
-
-include_once 'php/header.php';
+<?php include_once 'php/header.php';
 
 
 
@@ -140,7 +143,6 @@ foreach($distinctEventType as $event)
 <br>
 
 
-<?php include_once 'php/header.php'; ?>
 <div id="container">
 
     <div id="eventz">
@@ -148,7 +150,7 @@ foreach($distinctEventType as $event)
     </div>
 
 </div>
-
+<?php include_once 'php/footer.php';?>
 
 </body>
 
