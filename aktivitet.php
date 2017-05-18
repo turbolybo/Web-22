@@ -2,29 +2,16 @@
 <?php
 
    $id = $_GET['id'];
-   $skole = 0;
 
    require 'vendor/autoload.php';
+   require 'php/local-query.php';
    use Carbon\Carbon;
    Carbon::setLocale('no');
-   // Local
+
    $google_id = 'AIzaSyAIpp_FV9KS9hT8-gwSNP6VJIPyGQjjOJk';
-
-   $port = 3306;
-   $username = 'root';
-   $password = '';
-   $name = 'events';
-   $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
-
-   $statement = $connection->prepare('SELECT * FROM activity WHERE id=:id');
-   $statement->bindParam(':id', $id);
-   $statement->execute();
-   $row = $statement->fetch();
+   $row = Activity::whereid($id)->first();
 ?>
 <body ontouchstart>
-   <?php
-
-    ?>
    <?php include_once 'php/header.php'; ?>
    <div id="main-wrapper">
         <div id="cover" style="background-image: url('<?php echo $row['img_url']; ?>')">
