@@ -233,6 +233,13 @@ section a {
    background: #000;
    color: #FFF;
 }
+#footer-bottom a:visited {
+   color: black;
+}
+#footer-bottom a:hover {
+   font-weight: bolder;
+   text-decoration: underline;
+}
 @media only screen and (max-device-width: 1300px), screen and (max-width: 1300px) {
    .activity-box {
       width: 50%;
@@ -246,6 +253,14 @@ section a {
    }
    .activity-box:not(:first-of-type) {
       margin-left: 0px;
+   }
+
+   #footer-bottom a:visited {
+      color: black;
+   }
+   #footer-bottom a:hover {
+      font-weight: bolder;
+      text-decoration: underline;
    }
 }
 @media only screen and (max-device-width: 750px), screen and (max-width: 750px) {
