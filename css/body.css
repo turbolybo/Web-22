@@ -288,6 +288,13 @@ section a {
       text-align: left;
       margin-left: 40px;
    }
+   #footer-bottom a:visited {
+    color: black;
+}
+   #footer-bottom a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
 }
 @media only screen and (max-device-width: 1200px), screen and (max-width: 1200px)  {
    #event-container {
