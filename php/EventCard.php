@@ -21,7 +21,7 @@ if($skoleIsSet && !$eventIsSet) {
             echo '<p>Beskrivelse: ' . $event['description'] . '</p>';
             echo '<p>Pris: ' . $event['pris'] . '</p>';
             echo '<p>' . $event['date']->diffForHumans() . '</p>
-            
+
             </div>';
             '<br>';
             '<br>';

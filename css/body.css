@@ -4,6 +4,8 @@ body, html {
 }
 #event-container {
    width: 100%;
+   max-width: 2560px;
+   margin: auto;
    height: 600px;
    border-bottom: 1px solid #d9d9d9;
 }
@@ -96,6 +98,7 @@ body, html {
    max-width: 1275px;
    min-height: 450px;
    margin: auto;
+   margin-bottom: 50px;
 }
 #activity-seeall {
    max-width: 1275px;
@@ -240,9 +243,6 @@ section a {
    }
    .activity-lower {
       width: 100%;
-   }
-   #activity-container {
-      height: 850px;
    }
    .activity-box:not(:first-of-type) {
       margin-left: 0px;

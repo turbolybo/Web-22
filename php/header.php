@@ -12,8 +12,8 @@
    <div id="mobile-menu">≡</div>
    <ul class="menu">
        <a href="index.php"><li>HJEM</li></a>
-       <a href="index.php"><li>ARRANGEMENTER</li></a>
-       <a href="index.php"><li>AKTIVITETER</li></a>
+       <a href="alle-arrangementer.php"><li>ARRANGEMENTER</li></a>
+       <a href="alle-aktiviteter.php"><li>AKTIVITETER</li></a>
        <li class="dropdown">
         <a class="dropbtn">CAMPUS</a>
             <div class="dropdown-content">

@@ -4,6 +4,5 @@
            <div class="event-title"><?= strtoupper($event['title']) ?></div>
            <div class="event-starts"><?= strtoupper($event['date']->diffForHumans()) ?></div>
            <a href="arrangement.php?id=<?= $event['id']?>"><div class="event-read">LES MER</div></a>
-           <div class="event-read">BILLETTER</div>
       </div>
    <?php break; } ?>
