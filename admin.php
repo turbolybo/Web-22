@@ -6,6 +6,17 @@
    <link rel="stylesheet" type="text/css" href="css/admin.css">
    <link rel="stylesheet" type="text/css" href="css/header.css">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+        /*Får ikke lagt til i admin.css*/
+        #school-dropdown {
+            position: relative; left: 25px; top: 10px;
+            width: 400px;
+        }
+
+    </style>
+
+
 </head>
 <body ontouchstart>
 
@@ -24,6 +35,14 @@
       $password = 'root';
       $name = 'events';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
+
+   $skoleListe = Skole::all();
+   $skoleAttributter = '';
+   foreach($skoleListe as $skole)
+   {
+       $skoleAttributter.= '<option value="' .$skole['id'] . '">' . $skole['navn'] . '</option>';
+   }
+
    ?>
    <div id="admin-top-info">
       <div class="admin-top-box">
@@ -56,30 +75,31 @@
          }
    }
    if ($add_value == 1) {
-      echo '<div id="admin-container">
+       echo '<div id="admin-container">
          <h3>LEGG TIL ARRANGEMENT</h3>
+<form action="php/insert-event.php" method="post">
+        <select id="school-dropdown" name="skole"><option hidden value="Velg skole">Velg skole</option>"' . $skoleAttributter . '" </select>
+        <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
+        <input type="text" name="description" placeholder="Beskrivelse" class="ico-title" required></input>
+        <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
+        <input type="date" name="date" class="ico-title" required></input>
+        <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
+        <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
+        <input type="submit" name="submit" value="LEGG TIL"></input>
+     </form>
+  </div>';
+
+   }
+
+  else if ($add_value == 2) {
+      echo '<div id="admin-container">
+         <h3>LEGG TIL AKTIVITET</h3>
          <form action="php/insert-event.php" method="post">
             <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
             <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
             <input type="date" name="date" class="ico-title" required></input>
             <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
-            <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
-            <input type="text" name="skole_id" placeholder="Hvilken skole" class="ico-title" required></input>
-            <input type="text" name="description" class="admin-description" placeholder="Tekst" class="ico-title" required></input>
-            <input type="submit" name="submit" value="LEGG TIL"></input>
-         </form>
-      </div>';
-   } else if ($add_value == 2) {
-      echo '<div id="admin-container">
-         <h3>LEGG TIL AKTIVITET</h3>
-         <form action="php/insert-activity.php" method="post">
-            <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
-            <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
-            <input type="text" name="skoleID" placeholder="Hvilken skole" class="ico-title" required></input>
-            <input type="text" name="type" placeholder="Type aktivitet" class="ico-title" required></input>
-            <input type="text" name="web" placeholder="Hjemmeside" class="ico-title" required></input>
-            <input type="text" name="rating" placeholder="Omtale fra 0-5" class="ico-title" required></input>
-            <input type="text" name="description" class="admin-description" placeholder="Tekst" class="ico-title" required></input>
+            <input type="text" name="description" placeholder="Tekst" class="ico-title" required></input>
             <input type="submit" name="submit" value="LEGG TIL"></input>
          </form>
       </div>';
