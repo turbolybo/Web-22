@@ -72,12 +72,14 @@
    } else if ($add_value == 2) {
       echo '<div id="admin-container">
          <h3>LEGG TIL AKTIVITET</h3>
-         <form action="php/insert-event.php" method="post">
+         <form action="php/insert-activity.php" method="post">
             <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
-            <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
-            <input type="date" name="date" class="ico-title" required></input>
             <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
-            <input type="text" name="description" placeholder="Tekst" class="ico-title" required></input>
+            <input type="text" name="skoleID" placeholder="Hvilken skole" class="ico-title" required></input>
+            <input type="text" name="type" placeholder="Type aktivitet" class="ico-title" required></input>
+            <input type="text" name="web" placeholder="Hjemmeside" class="ico-title" required></input>
+            <input type="text" name="rating" placeholder="Omtale fra 0-5" class="ico-title" required></input>
+            <input type="text" name="description" class="admin-description" placeholder="Tekst" class="ico-title" required></input>
             <input type="submit" name="submit" value="LEGG TIL"></input>
          </form>
       </div>';
