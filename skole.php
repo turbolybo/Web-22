@@ -9,15 +9,13 @@
             text-align: center;
             opacity: 0;
             padding-top: 16px;
-            padding-bottom: 40px;
             width: 50%;
             animation-name: eventsAnim;
             animation-duration: 4s;
             animation-fill-mode: forwards;
             position: relative;
             margin: auto;
-
-
+            display: inline-block;
 
         }
 
@@ -41,10 +39,15 @@
 
         #container {
             position: relative;
+            width: 100%;
+            height: auto;
+            margin-bottom: 50px;
+            display: inline-block;
         }
 
         #eventz {
             position: relative;
+            height: auto;
         }
 
 
@@ -144,15 +147,10 @@ foreach($distinctEventType as $event)
 
 
 <div id="container">
-
     <div id="eventz">
         <?php require 'php/EventCard.php'; ?>
     </div>
-
 </div>
 <?php include_once 'php/footer.php';?>
 
 </body>
-
-
-
