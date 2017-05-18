@@ -4,20 +4,11 @@
    $id = $_GET['id'];
 
    require 'vendor/autoload.php';
+   require 'php/local-query.php';
    use Carbon\Carbon;
    Carbon::setLocale('no');
    // Local
-
-   $port = 3306;
-   $username = 'root';
-   $password = '';
-   $name = 'events';
-   $connection = new PDO('mysql:host=localhost;dbname=eksamen', $username, $password);
-
-   $statement = $connection->prepare('SELECT * FROM events WHERE id=:id');
-   $statement->bindParam(':id', $id);
-   $statement->execute();
-   $row = $statement->fetch();
+   $row = Event::whereid($id)->first();
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>
