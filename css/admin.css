@@ -37,8 +37,8 @@ body {
    color: #d29326;
 }
 #admin-container {
-   width: 450px;
-   height: 810px;
+    width: 450px;
+   height: auto;
    margin: auto;
    margin-bottom: 50px;
    background: #FFF;
@@ -74,7 +74,8 @@ input {
    background: #589974;
 }
 input[type=submit] {
-   background: #ff7061;
+   position: relative;
+    background: #ff7061;
    color: #FFF;
    border: none;
    height: 60px;
@@ -112,7 +113,7 @@ h3 {
    color: #FFF;
 }
 .admin-description {
-   height: 92px !important;
+   height: 42px !important;
 }
 .admin-row {
    width: 400px;

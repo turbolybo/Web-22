@@ -1,5 +1,13 @@
 Eksamen PRO101 - Gruppe 22.
 
-link til den endelige websiden: 
-link til video om Kanban: https://www.youtube.com/watch?v=aAJpke60vvE
+link til den endelige websiden:
+
+ 
+link til video om Kanban:
+https://www.youtube.com/watch?v=aAJpke60vvE
+
 link til prototype:
+https://invis.io/KZBROAQN6
+
+link til git:
+https://github.com/turbolybo/Web-22
