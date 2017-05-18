@@ -28,7 +28,7 @@
    </div>
 
     <div id="footer-bottom">Copyright © 2017 - Eksamensgruppe 22. Alle rettigheter forbeholdes.
-        <button1 onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a>Logg inn Admin</a></button1></div>
+        <button1 onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a">Logg inn Admin</a></button1></div>
 </footer>
 
 <div id="id01" class="modal">
@@ -47,12 +47,6 @@
             <input type="password" placeholder="Skriv inn passord" name="psw" required>
 
             <button type="submit">Login</button>
-            <input type="checkbox" checked="checked"> Husk meg
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Avbryt</button>
-            <span class="psw">Glemt <a href="#">passord?</a></span>
         </div>
     </form>
 </div>
