@@ -12,37 +12,32 @@ $eventIsSet = $_GET['event'];
 
 
 if($skoleIsSet && !$eventIsSet) {
-    foreach($events as $event) {
-        if($event['skole_id'] == $skoleIsSet) {
-            $img = $event['img_url'];
-            echo '<div id="events">';
-            echo '<img src="' . $img . '" height="300" width="300"/>';
-            echo '<h1>' . $event['title'] . '</h1>';
-            echo '<p>Beskrivelse: ' . $event['description'] . '</p>';
-            echo '<p>Pris: ' . $event['pris'] . '</p>';
-            echo '<p>' . $event['date']->diffForHumans() . '</p>
-
-            </div>';
-            '<br>';
-            '<br>';
-
+    foreach($events as $a) {
+        if($a['skole_id'] == $skoleIsSet) {
+           echo '<div class="each-item">';
+           echo '<div class="item-upper" style="background-image: url(', $a['img_url'], '")>';
+           echo '<div id="title">';
+           echo $a['title'];
+           echo '</div>';
+           echo '</div>';
+           echo '<p>',$a['date']->diffForHumans(),'</p>';
+           echo '<a href="arrangement.php?id=',$a['id'],'"><div class="visit">LES MER</div></a>';
+           echo "</div>";
         }
     }
 } else {
 
-    foreach ($events as $event) {
-        if($event['type'] == $eventIsSet && $event['skole_id'] == $skoleIsSet) {
-            $img = $event['img_url'];
-            echo '<div id="events">';
-            echo '<img src="' . $img . '" height="300" width="300"/>';
-            echo '<h1>' . $event['title'] . '</h1>';
-            echo '<p>Beskrivelse: ' . $event['description'] . '</p>';
-            echo '<p>Pris: ' . $event['pris'] . '</p>';
-            echo '<p>' . $event['date']->diffForHumans() . '</p>
-
-            </div>';
-            '<br>';
-            '<br>';
+    foreach ($events as $a) {
+        if($a['type'] == $eventIsSet && $a['skole_id'] == $skoleIsSet) {
+           echo '<div class="each-item">';
+           echo '<div class="item-upper" style="background-image: url(', $a['img_url'], '")>';
+           echo '<div id="title">';
+           echo $a['title'];
+           echo '</div>';
+           echo '</div>';
+           echo '<p>',$a['date']->diffForHumans(),'</p>';
+           echo '<a href="arrangement.php?id=',$a['id'],'"><div class="visit">LES MER</div></a>';
+           echo "</div>";
         }
     }
 }

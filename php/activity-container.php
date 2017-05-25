@@ -28,5 +28,5 @@
         echo '<a href="aktivitet.php?id=',$a['id'],'"><div class="visit">LES MER</div></a>';
       echo '</div>';
       echo '</div>';
-      }
+   }
 ?>

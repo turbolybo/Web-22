@@ -2,6 +2,7 @@
    width: 675px;
    height: 100px;
    margin: auto;
+   z-index: 999;
 }
 header {
    width: 100%;
@@ -18,7 +19,6 @@ nav li {
    float: left;
    padding: 0px 30px 0px 30px;
    line-height: 100px;
-
 }
 
 nav a{
@@ -40,6 +40,7 @@ nav li:hover {
    font-size: 80px;
    line-height: 90px;
    color: #3d3d3d;
+   z-index: 999;
 }
 .logo {
    width: 80px;
@@ -97,6 +98,7 @@ nav li:hover {
    #mobile-menu {
       display: inline-block;
       float: right;
+      z-index: 999;
    }
    #nav {
       width: 100%;
@@ -109,18 +111,22 @@ nav li:hover {
 		width: 100%;
       padding: 0;
       border-top: 1px solid #d9d9d9;
+      z-index: 10;
    }
    nav li {
 		text-align: center;
 		width: 100%;
       padding: 0;
       border-bottom: 1px solid #d9d9d9;
+      z-index: 9;
 	}
    nav li:hover {
       background: #3d3d3d;
       color: #FFF;
+      z-index: 8;
    }
 	nav:hover ul {
 		display: block;
+      z-index: 7;
 	}
 }
