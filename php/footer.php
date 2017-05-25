@@ -3,21 +3,16 @@
         <ul class="sitemap">
            <li><b>Oversikt:</b></li>
            <a href="./index.php"><li>Hjem</li></a>
-           <a href="./arrangement.php"><li>Arrangementer</li></a>
-           <a href="./index.php"><li>Aktiviteter</li></a>
-           <a href="./index.php"><li>Campus</li></a>
+           <a href="./alle-arrangementer.php"><li>Arrangementer</li></a>
+           <a href="./alle-aktiviteter.php"><li>Aktiviteter</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Arrangementer:</b></li>
-           <a href="./index.php"><li>Nær Fjerdingen</li></a>
-           <a href="./index.php"><li>Nær Vulkan</li></a>
-           <a href="./index.php"><li>Nær Brenneriveien</li></a>
+           <a href="./alle-arrangementer.php"><li>Alle arrangementer</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Aktiviteter:</b></li>
-           <a href="./index.php"><li>Nær Fjerdingen</li></a>
-           <a href="./index.php"><li>Nær Vulkan</li></a>
-           <a href="./index.php"><li>Nær Brenneriveien</li></a>
+           <a href="./alle-aktiviteter.php"><li>Alle aktiviteter</li></a>
         </ul>
         <ul class="sitemap">
            <li><b>Campus:</b></li>
