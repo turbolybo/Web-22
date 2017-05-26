@@ -2,7 +2,11 @@
 
 use Illuminate\Database\Eloquent\Model;
 require_once '../vendor/autoload.php';
-
+session_start();
+if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+{
+    header("Location:../404.php");
+}
 class Event extends Model
 {
     protected $fillable = ['id', 'title', 'description', 'pris', 'img_url', 'date'];
@@ -54,7 +58,7 @@ class Event extends Model
       ?><div id="delete"><?php
       echo 'Slettet arrangement "',$delete['title'],'" med ID: ',$delete['id'],'';
       ?>
-      <form action="../admin.php" method="post">  
+      <form action="../admin.php" method="post">
          <input class="submit-first" type="submit" name="goBack" value="< Gå tilbake">
       </form>
       </div>

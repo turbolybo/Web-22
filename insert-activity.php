@@ -10,6 +10,18 @@ $school = $_POST['skole'];
 $web = $_POST['web'];
 $rating = $_POST['rating'];
 
+switch($school) {
+   case 'Campus Brennerviveien';
+        $schoolId = 1;
+        break;
+   case 'Campus Vulkan';
+        $schoolId = 2;
+        break;
+   case 'Campus Fjerdingen';
+        $schoolId = 3;
+        break;
+}
+
 $activity = new Activity();
 $activity->title = $title;
 $activity->description = $description;

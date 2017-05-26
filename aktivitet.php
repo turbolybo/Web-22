@@ -2,7 +2,6 @@
 <?php
 
    $id = $_GET['id'];
-
    require 'vendor/autoload.php';
    require 'php/local-query.php';
    use Carbon\Carbon;
@@ -10,17 +9,21 @@
 
    $google_id = 'AIzaSyAIpp_FV9KS9hT8-gwSNP6VJIPyGQjjOJk';
    $row = Activity::whereid($id)->first();
+   if ($row['id'] == NULL) {
+      header('Location: 404.php');
+   }
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>
    <div id="main-wrapper">
         <div id="cover" style="background-image: url('<?php echo $row['img_url']; ?>')">
+           <div class="img-title"><?php echo $row['title']; ?></div>
         </div>
         <section>
-             <h1><?php echo $row['title']; ?></h1>
+
 
              <article>
-                <?= $row['description'] ?>
+                <?php echo $row['description']; ?>
              </article>
              <a href="http://<?= $row['web'] ?>"><div id="web-link">HJEMMESIDE</div></a>
         </section>

@@ -109,7 +109,7 @@
                <div id="admin-id"><?= $event['id'] ?></div>
                <div id="admin-date"><?= $event['date']->diffForHumans() ?></div>
                <div id="admin-title"><?= $event['title'] ?></div>
-               <a id="admin-edit" href="php/edit.php?id=<?= $event['id']?>"></a>
+               <a id="admin-edit" href="php/update-event.php?id=<?= $event['id']?>"></a>
                <a id="admin-delete" href="php/delete-event.php?id=<?= $event['id']?>"></a>
             </div>
          <?php }?>
@@ -126,8 +126,8 @@
       foreach ($activity as $a) {?>
          <div class="admin-row">
             <div id="admin-id"><?= $a['id'] ?></div>
-            <div id="admin-title"><?= $a['title'] ?></div>
-            <a id="admin-edit" href="php/edit.php?id=<?= $a['id'] ?>"></a>
+            <div id="admin-title-extend"><?= $a['title'] ?></div>
+            <a id="admin-edit" href="php/update-activity.php?id=<?= $a['id'] ?>"></a>
             <a id="admin-delete" href="php/delete-activity.php?id=<?= $a['id'] ?>"></a>
          </div>
       <?php }

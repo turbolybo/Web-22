@@ -10,6 +10,18 @@ $type = $_POST['type'];
 $school = $_POST['skole'];
 $schoolId = $_POST['skole'];
 
+switch($school) {
+   case 'Campus Brennerviveien';
+        $schoolId = 1;
+        break;
+   case 'Campus Vulkan';
+        $schoolId = 2;
+        break;
+   case 'Campus Fjerdingen';
+        $schoolId = 3;
+        break;
+}
+
 $event = new Event();
 $event->title = $title;
 $event->description = $description;

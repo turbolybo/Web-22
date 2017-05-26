@@ -1,4 +1,4 @@
-<footer class="footer-container">
+<footer id="footer-container">
    <div id="footer-inner">
         <ul class="sitemap">
            <li><b>Oversikt:</b></li>

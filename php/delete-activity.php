@@ -2,7 +2,11 @@
 
 use Illuminate\Database\Eloquent\Model;
 require_once '../vendor/autoload.php';
-
+session_start();
+if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+{
+    header("Location:../404.php");
+}
 class Activity extends Model
 {
     public $table = "activity";
