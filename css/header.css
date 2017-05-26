@@ -11,7 +11,7 @@ header {
    border-bottom: 1px solid #d9d9d9;
 }
 nav ul {
-   width: 675px;
+   width: 800px;
    margin: auto;
 }
 nav li {
@@ -29,7 +29,33 @@ nav a{
 nav li:hover {
    background: #3d3d3d;
    color: #FFFFFF;
-    text-decoration: none;
+   text-decoration: none;
+}
+
+#scalePageIcon{
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    top: 0px;
+    color: inherit;
+    background-color: #FFF;
+    float: right;
+}
+
+#scalePageInstructions{
+    position: absolute;
+    margin: auto;
+    padding: 10 10 10 10;
+    background-color: #FFF;
+    color: #000;
+    font-size: 4em;
+    text-align: center;
+    display: none;
+}
+
+#scalePageIcon:hover + #scalePageInstructions{
+    display: block;
+
 }
 
 #mobile-menu {
@@ -95,6 +121,10 @@ nav li:hover {
 
 
 @media only screen and (max-device-width: 667px), screen and (max-width: 667px)  {
+
+   #scalePageIcon{
+       display: block;
+   }
    #mobile-menu {
       display: inline-block;
       float: right;

@@ -8,20 +8,24 @@
 </head>
 <header>
    <a href="index.php"><div class="logo"></div></a>
-<nav id="nav">
-   <div id="mobile-menu">≡</div>
-   <ul class="menu">
-       <a href="index.php"><li>HJEM</li></a>
-       <a href="alle-arrangementer.php"><li>ARRANGEMENTER</li></a>
-       <a href="alle-aktiviteter.php"><li>AKTIVITETER</li></a>
-       <li class="dropdown">
-        <a class="dropbtn">CAMPUS</a>
-            <div class="dropdown-content">
-                <a href="./skole.php?skoleId=3">Fjerdingen</a>
-                <a href="./skole.php?skoleId=2">Brenneriveien</a>
-                <a href="./skole.php?skoleId=1">Vulkan</a>
-            </div>
-       </li>
-   </ul>
-</nav>
+    <nav id="nav">
+        <div id="mobile-menu">≡</div>
+        <ul class="menu">
+            <a href="index.php"><li>HJEM</li></a>
+            <a href="alle-arrangementer.php"><li>ARRANGEMENTER</li></a>
+            <a href="alle-aktiviteter.php"><li>AKTIVITETER</li></a>
+            <li class="dropdown">
+                <a class="dropbtn">CAMPUS</a>
+                <div class="dropdown-content">
+                    <a href="./skole.php?skoleId=3">Fjerdingen</a>
+                    <a href="./skole.php?skoleId=2">Brenneriveien</a>
+                    <a href="./skole.php?skoleId=1">Vulkan</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="scalePageIcon">Aa</div>
+    <div id="scalePageInstructions">
+             <p>På tastaturet: Hold nede Ctrl-tasten. Trykk på + for å forstørre, og - for å forminske siden.</p>
+    </div>
 </header>
