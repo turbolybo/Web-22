@@ -18,7 +18,7 @@ $event->img_url = $url;
 $event->date = $date;
 $event->type = $type;
 $event->skole_id = $school;
-
 $event->save();
+header('Location: admin.php');
 
 ?>

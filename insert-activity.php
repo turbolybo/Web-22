@@ -20,5 +20,6 @@ $activity->skoleID = $school;
 $activity->rating = $rating;
 $activity->web = $web;
 $activity->save();
+header('Location: admin.php');
 
 ?>
