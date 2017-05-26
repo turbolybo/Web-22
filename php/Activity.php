@@ -8,5 +8,6 @@ class Activity extends Model
     public $table = "activity";
     protected $fillable = ['id', 'title', 'address'];
     protected $dates = ['date'];
+    public $timestamps = false;
 
 }

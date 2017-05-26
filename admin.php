@@ -1,16 +1,3 @@
-<?php   session_start();  ?>
-<?php
-if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
-{
-    header("Location:php/login.php");
-}
-
-echo $_SESSION['use'];
-
-echo "Login Success";
-
-echo "<a href='php/logout.php'> Logout</a> "
-    ?>
 <!doctype HTML>
 <head>
    <meta name="viewport" content="initial-scale=1.0">
@@ -20,33 +7,22 @@ echo "<a href='php/logout.php'> Logout</a> "
    <link rel="stylesheet" type="text/css" href="css/header.css">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-    <style>
-        /*Får ikke lagt til i admin.css*/
-        #school-dropdown {
-            position: relative; left: 25px; top: 10px;
-            width: 400px;
-        }
-
-    </style>
-
-
 </head>
 <body ontouchstart>
 
    <?php
-    include 'php/local-query.php';
+      session_start();
+      if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+      {
+          header("Location:php/login.php");
+      }
+
+      include 'php/local-query.php';
       include_once 'php/header.php';
+      echo "<div id='logout-wrapper'><a href='php/logout.php'><div id='logout'>LOGG UT</div></a></div>";
       require './vendor/autoload.php';
       use Carbon\Carbon;
       Carbon::setLocale('no');
-
-
-
-      $events = Event::all();
-      $port = 8889;
-      $username = 'root';
-      $password = 'root';
-      $name = 'events';
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
 
    $skoleListe = Skole::all();
@@ -90,30 +66,32 @@ echo "<a href='php/logout.php'> Logout</a> "
    if ($add_value == 1) {
        echo '<div id="admin-container">
          <h3>LEGG TIL ARRANGEMENT</h3>
-<form action="php/insert-event.php" method="post">
-        <select id="school-dropdown" name="skole"><option hidden value="Velg skole">Velg skole</option>"' . $skoleAttributter . '" </select>
-        <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
-        <input type="text" name="description" placeholder="Beskrivelse" class="ico-title" required></input>
-        <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
-        <input type="date" name="date" class="ico-title" required></input>
-        <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
-        <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
-        <input type="submit" name="submit" value="LEGG TIL"></input>
-     </form>
-  </div>';
-
+         <form action="insert-event.php" method="post">
+                 <select id="school-dropdown" name="skole"><option hidden value="Velg skole">Velg skole</option>"' . $skoleAttributter . '" </select>
+                 <input type="text" name="title" placeholder="Tittel" class="ico-title" required></input>
+                 <input type="text" name="description" placeholder="Beskrivelse" class="ico-title" required></input>
+                 <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
+                 <input type="date" name="date" class="ico-title" required></input>
+                 <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
+                 <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
+                 <input type="submit" name="submit" class="add" value="LEGG TIL"></input>
+              </form>
+           </div>';
    }
 
   else if ($add_value == 2) {
       echo '<div id="admin-container">
          <h3>LEGG TIL AKTIVITET</h3>
-         <form action="php/insert-event.php" method="post">
-            <input type="text" name="Title" placeholder="Tittel" class="ico-title" required></input>
-            <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
-            <input type="date" name="date" class="ico-title" required></input>
+         <form action="insert-activity.php" method="post">
+            <select id="school-dropdown" name="skole"><option hidden value="Velg skole">Velg skole</option>"' . $skoleAttributter . '" </select>
+            <input type="text" name="title" placeholder="Tittel" class="ico-title" required></input>
             <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
+            <input type="text" name="maps" placeholder="Adresse" class="ico-title" required></input>
             <input type="text" name="description" placeholder="Tekst" class="ico-title" required></input>
-            <input type="submit" name="submit" value="LEGG TIL"></input>
+            <input type="text" name="type" placeholder="Type" class="ico-title" required></input>
+            <input type="text" name="web" placeholder="Hjemmeside" class="ico-title"></input>
+            <input type="text" name="rating" placeholder="Rating (1-5)" class="ico-title" required></input>
+            <input type="submit" name="submit" class="add" value="LEGG TIL"></input>
          </form>
       </div>';
    }
@@ -125,13 +103,14 @@ echo "<a href='php/logout.php'> Logout</a> "
       <div id="display-rows">
    <div id="display-rows">
       <?php
+      $events = Event::all();
          foreach ($events as $event) {?>
             <div class="admin-row">
                <div id="admin-id"><?= $event['id'] ?></div>
                <div id="admin-date"><?= $event['date']->diffForHumans() ?></div>
                <div id="admin-title"><?= $event['title'] ?></div>
                <a id="admin-edit" href="php/edit.php?id=<?= $event['id']?>"></a>
-               <a id="admin-delete" href="php/delete.php?id=<?= $event['id']?>"></a>
+               <a id="admin-delete" href="php/delete-event.php?id=<?= $event['id']?>"></a>
             </div>
          <?php }?>
       </div>
@@ -142,18 +121,17 @@ echo "<a href='php/logout.php'> Logout</a> "
       <div id="top-row">Aktiviteter</div>
       <div id="display-rows">
       <?php
-/*      $activity = Activity::all();
+      $activity = Activity::all();
 
       foreach ($activity as $a) {?>
          <div class="admin-row">
-            <div id="admin-id"></div>
-            <div id="admin-date"></div>
-            <div id="admin-title"></div>
-            <a id="admin-edit" href="php/edit.php?id="></a>
-            <a id="admin-delete" href="php/delete.php?id=""></a>
+            <div id="admin-id"><?= $a['id'] ?></div>
+            <div id="admin-title"><?= $a['title'] ?></div>
+            <a id="admin-edit" href="php/edit.php?id=<?= $a['id'] ?>"></a>
+            <a id="admin-delete" href="php/delete-activity.php?id=<?= $a['id'] ?>"></a>
          </div>
       <?php }
-*/
+
       ?>
    </div>
    </div>

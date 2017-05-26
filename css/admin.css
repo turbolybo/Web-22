@@ -2,10 +2,39 @@ body {
    background: #ccc;
    font-family: 'Lato', sans-serif;
 }
+#skole-dropdown {
+   width: 250px;
+}
 #admin-top-info {
    width: 825px;
    height: 250px;
    margin: 35px auto;
+}
+#logout {
+   width: 820px;
+   height: 75px;
+   text-align: center;
+   line-height: 75px;
+   background: #FFF;
+   border: 1px solid #d5d5d5;
+   color: #000 !important;
+   text-decoration: none;
+}
+#logout:hover {
+   background: #7ec59d;
+   color: #FFF;
+}
+#logout-wrapper a {
+   color: #000;
+   text-decoration: none;
+}
+#logout-wrapper:hover {
+   color: #FFF;
+}
+#logout-wrapper {
+   width: 820px;
+   height: 75px;
+   margin: 50px auto;
 }
 .admin-top-box {
    width: 225px;
@@ -18,6 +47,16 @@ body {
    -moz-border-radius: 2px;
    text-align: center;
    float: left;
+}
+#delete {
+   width: 600px;
+   height: 300px;
+   padding-top: 50px;
+   margin-bottom: 50px;
+   margin: auto;
+   text-align: center;
+   color: #000;
+   font-weight: bold;
 }
 .offset {
    margin-left: 25px;
@@ -36,8 +75,29 @@ body {
 .orange {
    color: #d29326;
 }
+input[type=date] {
+   width: 744px;
+   margin-left: 0px;
+   padding-left: 15px;
+   margin-top: 0px;
+   border: 1px solid #CCC;
+}
+select {
+   width: 760px;
+   height: 45px;
+   padding-left: 15px;
+   text-align: center;
+   line-height: 45px;
+   border: 1px solid #CCC;
+   font-size: 1em;
+   color: #757575;
+}
+.add {
+   width: 760px !important;
+   margin-bottom: 20px;
+}
 #admin-container {
-    width: 450px;
+   width: 760px;
    height: auto;
    margin: auto;
    margin-bottom: 50px;
@@ -46,7 +106,7 @@ body {
    margin-top: 50px;
 }
 #admin-check {
-   width: 450px;
+   width: 780px;
    height: 200px;
    margin: auto;
    margin-bottom: 50px;
@@ -75,7 +135,9 @@ input {
 }
 input[type=submit] {
    position: relative;
-    background: #ff7061;
+   width: 700px;
+   background: #ff7061;
+   margin-left: 0;
    color: #FFF;
    border: none;
    height: 60px;

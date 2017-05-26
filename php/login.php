@@ -5,7 +5,7 @@
 if(isset($_SESSION['use']))   // Checking whether the session is already there or not if
     // true then header redirect it to the home page directly
 {
-    header("Location:home.php");
+    header("Location:../admin.php");
 }
 
 if(isset($_POST['login']))   // it checks whether the user clicked login button or not

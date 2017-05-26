@@ -1,30 +1,24 @@
 <?php
-   $title = $_POST['Title'];
-   $pris = $_POST['pris'];
-   $date = $_POST['date'];
-   $url = $_POST['img_url'];
-   $description = $_POST['description'];
+require 'php/local-query.php';
 
-   // Connect and select DB
-   $connect =  mysqli_connect('localhost', 'root', '');
-   if (!$connect) {
-      echo 'Not connected';
-   }
+$title = $_POST['title'];
+$description = $_POST['description'];
+$pris = $_POST['pris'];
+$url = $_POST['img_url'];
+$date = $_POST['date'];
+$type = $_POST['type'];
+$school = $_POST['skole'];
+$schoolId = $_POST['skole'];
 
-   if (!mysqli_select_db($connect, 'lyband16_eksamen')) {
-      echo 'Database not selected';
-   }
+$event = new Event();
+$event->title = $title;
+$event->description = $description;
+$event->pris = $pris;
+$event->img_url = $url;
+$event->date = $date;
+$event->type = $type;
+$event->skole_id = $school;
 
-   // Submit
-      $sql = "INSERT INTO events (id, title, description, pris, img_url, date)
-      VALUES (NULL, '$title', '$description', '$pris', '$url', '$date')";
-
-         if ($connect->query($sql) === TRUE) {
-            header("Location:../index.php");
-            exit;
-         } else {
-            echo "Error: " . $sql . "<br>" . $connect->error;
-         }
-         $connect->close();
+$event->save();
 
 ?>
