@@ -1,60 +1,44 @@
-<?php  session_start(); ?>  // session starts with the help of this function
-
-<?php
-
-if(isset($_SESSION['use']))   // Checking whether the session is already there or not if
-    // true then header redirect it to the home page directly
+<?php  session_start();
+if(isset($_SESSION['use']))
 {
     header("Location:../admin.php");
 }
-
-if(isset($_POST['login']))   // it checks whether the user clicked login button or not
+require_once 'header.php';
+if(isset($_POST['login']))
 {
     $user = $_POST['user'];
     $pass = $_POST['pass'];
-
-    if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password
-    {                                   // is 1234 by default
-
+    if($user == "Ank" && $pass == "1234") {
         $_SESSION['use']=$user;
-
-
-        echo '<script type="text/javascript"> window.open("../admin.php","_self");</script>';            //  On Successful Login redirects to home.php
-
-    }
-
-    else
-    {
-        echo "invalid UserName or Password";
+        echo '<script type="text/javascript"> window.open("../admin.php","_self");</script>';
+    }  else {
+        echo "<br></br><center>Feil brukernavn eller passord. Prøv igjen</center>";
     }
 }
 ?>
 <html>
 <head>
-
-    <title> Login Page   </title>
-
+    <title>Admin - login</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/body.css">
+    <link rel="stylesheet" type="text/css" href="../css/arrangement.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-
-<body>
-
+<body ontouchstart>
 <form action="" method="post">
-
-    <table width="200" border="0">
-        <tr>
-            <td>  UserName</td>
-            <td> <input type="text" name="user" > </td>
-        </tr>
-        <tr>
-            <td> PassWord  </td>
-            <td><input type="password" name="pass"></td>
-        </tr>
-        <tr>
-            <td> <input type="submit" name="login" value="LOGIN"></td>
-            <td></td>
-        </tr>
-    </table>
+   <div id="admin-container">
+      <br></br>
+      <b>Brukernavn:</b>
+      <input type="text" placeholder="Brukernavn" name="user"><br></br>
+      <b>Passord:</b>
+      <input type="password" placeholder="Passord" name="pass">
+      <input type="submit" class="add" name="login" value="LOGIN">
+   </div>
 </form>
-
+<div id="space""></div>
+<?php require_once 'footer.php'; ?>
 </body>
 </html>
