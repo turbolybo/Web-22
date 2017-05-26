@@ -122,8 +122,8 @@ nav li:hover {
 
 @media only screen and (max-device-width: 667px), screen and (max-width: 667px)  {
 
-   #scalePageIcon{
-       display: block;
+    #scalePageIcon{
+       display: none;
    }
    #mobile-menu {
       display: inline-block;
