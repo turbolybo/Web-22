@@ -1,3 +1,16 @@
+<?php   session_start();  ?>
+<?php
+if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+{
+    header("Location:php/login.php");
+}
+
+echo $_SESSION['use'];
+
+echo "Login Success";
+
+echo "<a href='php/logout.php'> Logout</a> "
+    ?>
 <!doctype HTML>
 <head>
    <meta name="viewport" content="initial-scale=1.0">
