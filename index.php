@@ -26,7 +26,11 @@
    </div>
    <h2 class="main-title">Aktiviteter / Lokale tilbud</h2>
    <div id="activity-container">
-      <?php require 'php/activity-container.php'; ?>
+       
+    <?php
+        $activity = Activity::orderBy('rating', 'DESC')->limit(4)->get();
+        require 'php/activity-container.php'; 
+    ?>
    </div>
    <a href="alle-aktiviteter.php"><div id="activity-seeall">SE ALLE TILBUD</div></a>
    <?php include_once 'php/footer.php';?>
