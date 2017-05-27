@@ -128,7 +128,9 @@ select {
    z-index: 0;
 }
 option {
-   appearance: none;
+   -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
    width: 20px;
    height: 20px;
    background: purple;

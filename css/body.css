@@ -44,8 +44,10 @@ body, html {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   flex-direction: column;
-   -moz-box-shadow: inset 0 -150px 200px -150px #000;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
    -webkit-box-shadow: inset 0 -150px 200px -150px #000;
    box-shadow: inset 0 -150px 200px -150px #000;
 }
@@ -80,6 +82,7 @@ body, html {
    border: 3px solid #FFF;
    text-align: center;
    line-height: 50px;
+   -webkit-transition: all ease-in-out .2s;
    transition: all ease-in-out .2s;
    font-weight: bold;
 }
@@ -123,7 +126,8 @@ body, html {
    background-repeat: no-repeat;
    background-position: center;
    border-radius: 3px;
-   box-shadow: 0px 5px 12px #CCC;
+   -webkit-box-shadow: 0px 5px 12px #CCC;
+           box-shadow: 0px 5px 12px #CCC;
    float: left;
 }
 .activity-box:not(:first-of-type) {
@@ -243,7 +247,8 @@ section a {
 @media only screen and (max-device-width: 1300px), screen and (max-width: 1300px) {
    .activity-box {
       width: 50%;
-      box-shadow: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
    }
    .activity-upper {
       width: 100%;
@@ -312,14 +317,17 @@ section a {
 }
 }
 @media only screen and (max-device-width: 1200px), screen and (max-width: 1200px)  {
-   #event-container {
-      height: 1200px;
+   #activity-seeall {
+      width: 400px;
+      height: 75px;
+      margin: auto;
    }
    #event-left {
       width: 100%;
    }
    #event-right {
       width: 100%;
+      height: 350px;
    }
    .event-title {
       font-size: 3em;
@@ -335,7 +343,8 @@ input[type=text], input[type=password] {
    margin: 8px 0;
    display: inline-block;
    border: 1px solid #ccc;
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
@@ -430,8 +439,8 @@ span.psw {
 }
 
 @keyframes animatezoom {
-   from {transform: scale(0)}
-   to {transform: scale(1)}
+   from {-webkit-transform: scale(0);transform: scale(0)}
+   to {-webkit-transform: scale(1);transform: scale(1)}
 }
 
 /* Change styles for span and cancel button on extra small screens */
