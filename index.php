@@ -28,8 +28,9 @@
    <div id="activity-container">
        
     <?php
-        $activity = Activity::orderBy('rating', 'DESC')->limit(4)->get();
         require 'php/activity-container.php'; 
+        $activities = Activity::orderBy('rating', 'DESC')->limit(4)->get();
+        WriteActivities($activities, true);        
     ?>
    </div>
    <a href="alle-aktiviteter.php"><div id="activity-seeall">SE ALLE TILBUD</div></a>

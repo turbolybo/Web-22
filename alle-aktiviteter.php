@@ -6,8 +6,9 @@
          use Carbon\Carbon;
          Carbon::setLocale('NO');
          include 'php/local-query.php';
-         $activity = Activity::orderBy('rating', 'DESC')->limit(100)->get();
         require 'php/activity-container.php'; 
+        $activities = Activity::orderBy('rating', 'DESC')->limit(100)->get();
+        WriteActivities($activities, true);
       ?>
    </div>
 

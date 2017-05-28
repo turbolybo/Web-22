@@ -6,8 +6,9 @@
          use Carbon\Carbon;
          Carbon::setLocale('NO');
          include 'php/local-query.php';
-        $activity = Event::orderBy('date', 'ASC')->limit(100)->get();
+        $activities = Event::orderBy('date', 'ASC')->limit(100)->get();
         require 'php/activity-container.php'; 
+        WriteActivities($activities, false);
       ?>
       <div class="clearFix"></div>
    </div>
