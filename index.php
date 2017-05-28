@@ -1,7 +1,8 @@
 <!doctype HTML>
 <?php
    include 'php/local-query.php';
-   $events = Event::all();
+   $events = Event::orderBy('date', 'asc')->get();
+   $event_right = Event::orderBy('date', 'asc')->take(5)->skip(1)->get();
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>
@@ -19,11 +20,7 @@
    </div>
    <h2 class="main-title">Aktiviteter / Lokale tilbud</h2>
    <div id="activity-container">
-    <?php
-        require 'php/activity-container.php'; 
-        $activities = Activity::orderBy('rating', 'DESC')->limit(4)->get();
-        WriteActivities($activities, true);        
-    ?>
+      <?php require 'php/activity-container.php'; ?>
    </div>
 
    <div id="activity-seall-container">

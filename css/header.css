@@ -35,11 +35,11 @@ nav li:hover {
 #scalePageIcon{
     position: absolute;
     right: 20px;
-    font-size: 2em;
+    font-size: 1.5em;
+    top: 35px;
     color: inherit;
     background-color: #FFF;
     float: right;
-    top: 32px;
 }
 
 #scalePageInstructions{
@@ -122,7 +122,7 @@ nav li:hover {
 }
 
 
-@media only screen and (max-device-width: 667px), screen and (max-width: 667px)  {
+@media only screen and (max-device-width: 750px), screen and (max-width: 750px)  {
 
     #scalePageIcon{
        display: none;
@@ -152,6 +152,9 @@ nav li:hover {
       border-bottom: 1px solid #d9d9d9;
       z-index: 9;
 	}
+   #activity-container {
+      height: 1600px;
+   }
    nav li:hover {
       background: #3d3d3d;
       color: #FFF;

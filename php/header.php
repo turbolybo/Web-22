@@ -1,7 +1,6 @@
 <head>
    <link rel="stylesheet" type="text/css" href="css/header.css">
    <link rel="stylesheet" type="text/css" href="css/body.css">
-   <link rel="stylesheet" type="text/css" href="css/arrangement.css">
    <meta name="viewport" content="initial-scale=1.0">
    <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="css/body.css">
@@ -27,6 +26,6 @@
     </nav>
     <div id="scalePageIcon">Aa</div>
     <div id="scalePageInstructions">
-        <p>På tastaturet: Hold nede Ctrl-tasten. Trykk på + for å forstørre, og - for å forminske siden.</p>
+             <p>På tastaturet: Hold nede Ctrl-tasten. Trykk på + for å forstørre, og - for å forminske siden.</p>
     </div>
 </header>
