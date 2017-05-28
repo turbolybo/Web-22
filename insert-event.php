@@ -9,7 +9,7 @@ $date = $_POST['date'];
 $type = $_POST['type'];
 $school = $_POST['skole'];
 $schoolId = $_POST['skole'];
-
+$maps = $_POST['maps'];
 switch($school) {
    case 'Campus Brennerviveien';
         $schoolId = 1;
@@ -30,6 +30,7 @@ $event->img_url = $url;
 $event->date = $date;
 $event->type = $type;
 $event->skole_id = $school;
+$event->maps = $maps;
 $event->save();
 header('Location: admin.php');
 

@@ -7,7 +7,8 @@
    require 'php/local-query.php';
    use Carbon\Carbon;
    Carbon::setLocale('no');
-   // Local
+
+   $google_id = 'AIzaSyAIpp_FV9KS9hT8-gwSNP6VJIPyGQjjOJk';
    $row = Event::whereid($id)->first();
    if ($row['id'] == NULL) {
       echo "<script>location.href='404.php';</script>";
@@ -33,6 +34,15 @@
                 <?= $row['description'] ?>
              </article>
         </section>
+     </div>
+        <div id="maps" class="no-scroll">
+           <iframe
+             width="100%"
+             height="450"
+             frameborder="0" style="border:0"
+             src="https://www.google.com/maps/embed/v1/place?key=<?= $google_id ?>
+               &q=<?= $row['maps'] ?>,Oslo+NORWAY" allowfullscreen>
+           </iframe>
    </div>
    <?php include_once 'php/footer.php';?>
 </body>

@@ -69,6 +69,7 @@ class Event extends Model
          <input type="date" name="date" class="ico-title" required></input>
          <input type="text" placehoder="Bildelenke" name="img_url" value="<?= $event['img_url'] ?>" class="ico-title" required></input>
          <input type="text" placehoder="Type" name="type" value="<?= $event['type'] ?>" class="ico-title" required></input>
+         <input type="text" placehoder="Adresse" name="maps" value="<?= $event['maps'] ?>" class="ico-title" required></input>
          <input type="submit" name="submit" class="add" value="OPPDATER"></input>
       </form>
       <?php
@@ -79,6 +80,7 @@ class Event extends Model
          $pris = $_POST['pris'];
          $url = $_POST['img_url'];
          $date = $_POST['date'];
+         $maps = $_POST['maps'];
          $type = $_POST['type'];
          $school = $_POST['skole'];
          $schoolId = $_POST['skole'];
@@ -103,6 +105,7 @@ class Event extends Model
          $a->date = $date;
          $a->type = $type;
          $a->skole_id = $school;
+         $a->maps = $maps;
          $a->save();
             echo "<script>location.href='../admin.php';</script>";
       }

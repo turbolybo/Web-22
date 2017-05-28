@@ -76,6 +76,7 @@
                  <input type="date" name="date" class="ico-title" required></input>
                  <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
                  <input type="text" name="type" placeholder="Type arrangement" class="ico-title" required></input>
+                 <input type="text" name="maps" placeholder="Adresse" class="ico-title" required></input>
                  <input type="submit" name="submit" class="add" value="LEGG TIL"></input>
               </form>
            </div>';
