@@ -71,11 +71,11 @@ h1 {
    display: inline-block;
    text-align: center;
 }
-.each-item {
-   width: 220px;
-   height: 300px;
+.activityPage #container-all{
+        margin-top:1em; 
+}
+.activity-box {
    float: left;
-   border: 2px solid #000;
    text-align: center;
    margin-bottom: 20px;
    color: #000;
@@ -87,7 +87,7 @@ h1 {
    font-size: 5vw;
    text-shadow: 0px 0px 12px #000;
 }
-.each-item a {
+.activity-box a {
    text-decoration: none;
 }
 .item-upper {
@@ -109,8 +109,8 @@ h1 {
    background: #000;
    color: #FFF;
 }
-.each-item:not(left) {
-   margin-left: 20px;
+.activity-box:not(left) {
+   margin-left: 25px;
 }
 .visit:hover {
    color: #FFF !important;
@@ -142,6 +142,9 @@ option {
    margin-top: 35px;
    z-index: 1;
 }
+.clearFix{
+        clear:both;
+}
 @media only screen and (max-device-width: 2000px), screen and (max-width: 999px) {
    h1 {
       font-size: 1.5em;
@@ -169,7 +172,7 @@ option {
    .item-upper {
       width: 100%;
    }
-   .each-item {
+   .activity-box {
       width: 45%;
    }
 }
@@ -183,7 +186,7 @@ option {
    .item-upper {
       width: 100%;
    }
-   .each-item {
+   .activity-box {
       width: 90%;
    }
 }

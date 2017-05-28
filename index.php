@@ -19,7 +19,11 @@
    </div>
    <h2 class="main-title">Aktiviteter / Lokale tilbud</h2>
    <div id="activity-container">
-      <?php require 'php/activity-container.php'; ?>
+    <?php
+        require 'php/activity-container.php'; 
+        $activities = Activity::orderBy('rating', 'DESC')->limit(4)->get();
+        WriteActivities($activities, true);        
+    ?>
    </div>
 
    <div id="activity-seall-container">
