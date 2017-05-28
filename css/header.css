@@ -35,15 +35,16 @@ nav li:hover {
 #scalePageIcon{
     position: absolute;
     right: 20px;
-    font-size: 2em;
+    font-size: 1.5em;
+    top: 35px;
     color: inherit;
     background-color: #FFF;
     float: right;
-    top: 32px;
 }
 
 #scalePageInstructions{
     position: absolute;
+    width: 100%;
     margin: auto;
     padding: 10 10 10 10;
     background-color: #FFF;

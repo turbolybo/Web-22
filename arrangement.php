@@ -10,7 +10,7 @@
    // Local
    $row = Event::whereid($id)->first();
    if ($row['id'] == NULL) {
-      header('Location: 404.php');
+      echo "<script>location.href='404.php';</script>";
    }
 ?>
 <body ontouchstart>
@@ -23,7 +23,7 @@
                 echo '<div id="isFree">GRATIS!</div>';
              } else {
                 echo '<div id="isNotFree">', $row['pris'], ",-", '</div>';
-             }?><div class="img-title"><?php echo $row['title']; ?></div>
+             }?><div class="img-title"><?php echo mb_strtoupper($row['title'], 'UTF-8'); ?></div>
 
         </div>
         <section>

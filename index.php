@@ -1,19 +1,12 @@
 <!doctype HTML>
 <?php
-
-   // LOKAL VERSJON
-
    include 'php/local-query.php';
    $events = Event::all();
-
-   // LIVE VERSJON
-   /*
-   include 'php/live-query.php';
-   */
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>
    <div id="event-container">
+
       <!-- VENSTRE - NYESTE EVENT -->
       <div id="event-left">
          <?php require 'php/event-left.php'; ?>
@@ -26,13 +19,12 @@
    </div>
    <h2 class="main-title">Aktiviteter / Lokale tilbud</h2>
    <div id="activity-container">
-       
-    <?php
-        require 'php/activity-container.php'; 
-        $activities = Activity::orderBy('rating', 'DESC')->limit(4)->get();
-        WriteActivities($activities, true);        
-    ?>
+      <?php require 'php/activity-container.php'; ?>
    </div>
-   <a href="alle-aktiviteter.php"><div id="activity-seeall">SE ALLE TILBUD</div></a>
+
+   <div id="activity-seall-container">
+      <a href="alle-aktiviteter.php"><div id="activity-seeall">SE ALLE TILBUD</div></a>
+   </div>
    <?php include_once 'php/footer.php';?>
 </body>
+<!html>

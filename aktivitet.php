@@ -10,19 +10,20 @@
    $google_id = 'AIzaSyAIpp_FV9KS9hT8-gwSNP6VJIPyGQjjOJk';
    $row = Activity::whereid($id)->first();
    if ($row['id'] == NULL) {
-      header('Location: 404.php');
+      echo "<script>location.href='404.php';</script>";
    }
 ?>
 <body ontouchstart>
    <?php include_once 'php/header.php'; ?>
    <div id="main-wrapper">
         <div id="cover" style="background-image: url('<?php echo $row['img_url']; ?>')">
-           <div class="img-title"><?php echo $row['title']; ?></div>
+           <div class="img-title"><?php echo mb_strtoupper($row['title'], 'UTF-8'); ?></div>
         </div>
         <section>
 
 
              <article>
+                <h2><?php echo "Om ", mb_strtolower($row['title'], 'UTF-8'); ?></h2>
                 <?php echo $row['description']; ?>
              </article>
              <a href="http://<?= $row['web'] ?>"><div id="web-link">HJEMMESIDE</div></a>

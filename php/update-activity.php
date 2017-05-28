@@ -5,7 +5,7 @@ require_once '../vendor/autoload.php';
 session_start();
 if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
 {
-    header("Location:../404.php");
+   echo "<script>location.href='../404.php';</script>";
 }
 class Activity extends Model
 {
@@ -17,7 +17,7 @@ class Activity extends Model
 }
 ?>
 <?php
-   include_once 'header.php';
+   include_once 'header-admin.php';
    $id = $_GET['id'];
    use Illuminate\Database\Capsule\Manager as Capsule;
    include '../vendor/autoload.php';
@@ -61,7 +61,7 @@ class Activity extends Model
             <option value="3">Campus Fjerdingen</option>
          </select>
          <input type="text" placehoder="Tittel" name="title" value="<?= $activity['title'] ?>" class="ico-title" required></input>
-         <input type="text" placehoder="Description" name="description" value="<?= $activity['description'] ?>" class="ico-title" required></input>
+         <textarea placehoder="Description" name="description" value="" class="ico-title" required><?= $activity['description'] ?></textarea>
          <input type="text" placehoder="Adresse" name="maps" value="<?= $activity['maps'] ?>" class="ico-title" required></input>
          <input type="text" placehoder="Bildelenke" name="img_url" value="<?= $activity['img_url'] ?>" class="ico-title" required></input>
          <input type="text" placehoder="Type" name="type" value="<?= $activity['type'] ?>" class="ico-title" required></input>
@@ -104,8 +104,7 @@ class Activity extends Model
          $a->type = $type;
          $a->skoleID = $school;
          $a->save();
-
-            header('Location: ../admin.php');
+            echo "<script>location.href='../admin.php';</script>";
       }
       ?>
    </div>

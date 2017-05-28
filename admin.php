@@ -14,7 +14,7 @@
       session_start();
       if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
       {
-          header("Location:php/login.php");
+          echo "<script>location.href='php/login.php';</script>";
       }
 
       include 'php/local-query.php';
@@ -26,6 +26,8 @@
       $add_value = 0; // 0 ingen valgt | 1 arrangement | 2 aktivitet
 
    $skoleListe = Skole::all();
+   $countEvent = Event::count();
+   $countActivity = Activity::count();
    $skoleAttributter = '';
    foreach($skoleListe as $skole)
    {
@@ -36,15 +38,15 @@
    <div id="admin-top-info">
       <div class="admin-top-box">
          <h4>Antall arrengementer:</h4>
-         <p class="blue">10</p>
+         <p class="blue"><?php echo $countEvent; ?></p>
       </div>
       <div class="admin-top-box offset">
          <h4>Antall aktiviteter:</h4>
-         <p class="red">13</p>
+         <p class="red"><?php echo $countActivity; ?></p>
       </div>
       <div class="admin-top-box offset">
          <h4>Antall linjer kode:</h4>
-         <p class="orange">1000+</p>
+         <p class="orange">2200+</p>
       </div>
    </div>
    <?php
@@ -69,7 +71,7 @@
          <form action="insert-event.php" method="post">
                  <select id="school-dropdown" name="skole"><option hidden value="Velg skole">Velg skole</option>"' . $skoleAttributter . '" </select>
                  <input type="text" name="title" placeholder="Tittel" class="ico-title" required></input>
-                 <input type="text" name="description" placeholder="Beskrivelse" class="ico-title" required></input>
+                 <textarea name="description" required>Beskrivelse</textarea>
                  <input type="text" name="pris" placeholder="Pris i NOK" class="ico-title" required></input>
                  <input type="date" name="date" class="ico-title" required></input>
                  <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
@@ -87,7 +89,7 @@
             <input type="text" name="title" placeholder="Tittel" class="ico-title" required></input>
             <input type="text" name="img_url" placeholder="Bildelenke" class="ico-title" required></input>
             <input type="text" name="maps" placeholder="Adresse" class="ico-title" required></input>
-            <input type="text" name="description" placeholder="Tekst" class="ico-title" required></input>
+            <textarea name="description"required>Beskrivelse</textarea>
             <input type="text" name="type" placeholder="Type" class="ico-title" required></input>
             <input type="text" name="web" placeholder="Hjemmeside" class="ico-title"></input>
             <input type="text" name="rating" placeholder="Rating (1-5)" class="ico-title" required></input>

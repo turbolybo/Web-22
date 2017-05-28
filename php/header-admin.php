@@ -11,15 +11,15 @@
     <nav id="nav">
         <div id="mobile-menu">≡</div>
         <ul class="menu">
-            <a href="index.php"><li>HJEM</li></a>
-            <a href="alle-arrangementer.php"><li>ARRANGEMENTER</li></a>
-            <a href="alle-aktiviteter.php"><li>AKTIVITETER</li></a>
+            <a href="../index.php"><li>HJEM</li></a>
+            <a href="../alle-arrangementer.php"><li>ARRANGEMENTER</li></a>
+            <a href="../alle-aktiviteter.php"><li>AKTIVITETER</li></a>
             <li class="dropdown">
                 <a class="dropbtn">CAMPUS</a>
                 <div class="dropdown-content">
-                    <a href="skole.php?skoleId=3">Fjerdingen</a>
-                    <a href="skole.php?skoleId=1">Brenneriveien</a>
-                    <a href="skole.php?skoleId=2">Vulkan</a>
+                    <a href="../skole.php?skoleId=3">Fjerdingen</a>
+                    <a href="../skole.php?skoleId=1">Brenneriveien</a>
+                    <a href="../skole.php?skoleId=2">Vulkan</a>
                 </div>
             </li>
         </ul>

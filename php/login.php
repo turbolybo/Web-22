@@ -3,7 +3,7 @@ if(isset($_SESSION['use']))
 {
     header("Location:../admin.php");
 }
-require_once 'header.php';
+require_once 'header-admin.php';
 if(isset($_POST['login']))
 {
     $user = $_POST['user'];
@@ -38,7 +38,7 @@ if(isset($_POST['login']))
       <input type="submit" class="add" name="login" value="LOGIN">
    </div>
 </form>
-<div id="space""></div>
+<div id="space"></div>
 <?php require_once 'footer.php'; ?>
 </body>
 </html>
