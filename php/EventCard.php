@@ -16,11 +16,8 @@ if($skoleIsSet && !$eventIsSet) {
         if($a['skole_id'] == $skoleIsSet) {
            echo '<div class="each-item">';
            echo '<div class="item-upper" style="background-image: url(', $a['img_url'], '")>';
-           echo '<div id="title">';
-           echo $a['title'];
            echo '</div>';
-           echo '</div>';
-           echo '<p>',$a['date']->diffForHumans(),'</p>';
+           echo '<p>',$a['title'],'</p>';
            echo '<a href="arrangement.php?id=',$a['id'],'"><div class="visit">LES MER</div></a>';
            echo "</div>";
         }
@@ -31,11 +28,8 @@ if($skoleIsSet && !$eventIsSet) {
         if($a['type'] == $eventIsSet && $a['skole_id'] == $skoleIsSet) {
            echo '<div class="each-item">';
            echo '<div class="item-upper" style="background-image: url(', $a['img_url'], '")>';
-           echo '<div id="title">';
-           echo $a['title'];
            echo '</div>';
-           echo '</div>';
-           echo '<p>',$a['date']->diffForHumans(),'</p>';
+           echo '<p>',$a['title'],'</p>';
            echo '<a href="arrangement.php?id=',$a['id'],'"><div class="visit">LES MER</div></a>';
            echo "</div>";
         }
