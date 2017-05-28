@@ -28,7 +28,7 @@
 
         </div>
         <section>
-             <h1><?php echo $row['title']; ?></h1>
+             <h1><?php echo "Om ", mb_strtolower($row['title']); ?></h1>
 
              <article>
                 <?= $row['description'] ?>
