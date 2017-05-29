@@ -1,3 +1,4 @@
 #Eksamen PRO101 - Gruppe 22
 - Konfigurer config.php til din egen DB
-- Plis gi oss A
+- Brukernavn: Ank - Passord: 1234
+- Plis gi oss A 
